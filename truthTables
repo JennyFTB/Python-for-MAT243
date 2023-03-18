@@ -1,6 +1,6 @@
 def truthTable_1(a, b, c, d):
     print("A\tB\tC\tD\t((A -> B) -> (C -> D))")  
-    print("--------------------------------------")
+    print("~~~~~~ ~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~ ~~~~~~~~~~~")
     # for statements to iterate the values of a,b, and c
     for aValue in [True, False]:  
         for bValue in [True, False]:  
@@ -15,7 +15,7 @@ def truthTable_1(a, b, c, d):
 
 def truthTable_2(a, b, c, d):
     print("A\tB\tC\tD\t((A -> (B -> C)) -> D)")  
-    print("---------------------------------------")
+    print("~~~~~ ~~~~~~~~~~~~ ~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~")
     # for statments to iterate the values of a, b, and c
     for aValue in [True, False]: 
         for bValue in [True, False]:  
