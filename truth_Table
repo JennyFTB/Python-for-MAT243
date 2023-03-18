@@ -1,0 +1,30 @@
+def truthTable_1(a, b, c, d):
+    print("A\tB\tC\tD\t((A -> B) -> (C -> D))")  
+    print("--------------------------------------")
+    # for statements to iterate the values of a,b, and c
+    for aValue in [True, False]:  
+        for bValue in [True, False]:  
+            for cValue in [True, False]:  
+                for dValue in [True, False]:
+                    aImpliesb = (not aValue) or bValue
+                    cImpliesd = (not cValue) or dValue
+                    # grab the truth value of ((A -> B) -> (C -> D))
+                    result = (not aImpliesb) or cImpliesd
+                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue,"\t", finalStatement)
+
+
+def truthTable_2(a, b, c, d):
+    print("A\tB\tC\tD\t((A -> (B -> C)) -> D)")  
+    print("---------------------------------------")
+    # for statments to iterate the values of a, b, and c
+    for aValue in [True, False]: 
+        for bValue in [True, False]:  
+            for cValue in [True, False]:  
+                for dValue in [True, False]:
+                    bImpliesc = (not bValue) or cValue
+                    aImpliesbImpliesc = (not aValue) or bImpliesc
+                    result = (not aImpliesbImpliesc) or dValue
+                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue, "\t", finalStatement)
+
+truthTable_1(True, True, True, True) 
+truthTable_2(True, True, True, True) 
