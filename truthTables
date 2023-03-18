@@ -10,7 +10,7 @@ def truthTable_1(a, b, c, d):
                     cImpliesd = (not cValue) or dValue
                     # grab the truth value of ((A -> B) -> (C -> D))
                     result = (not aImpliesb) or cImpliesd
-                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue,"\t", finalStatement)
+                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue,"\t", result)
 
 
 def truthTable_2(a, b, c, d):
@@ -24,7 +24,7 @@ def truthTable_2(a, b, c, d):
                     bImpliesc = (not bValue) or cValue
                     aImpliesbImpliesc = (not aValue) or bImpliesc
                     result = (not aImpliesbImpliesc) or dValue
-                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue, "\t", finalStatement)
+                    print(aValue, "\t", bValue, "\t", cValue, "\t", dValue, "\t", result)
 
 truthTable_1(True, True, True, True) 
 truthTable_2(True, True, True, True) 
