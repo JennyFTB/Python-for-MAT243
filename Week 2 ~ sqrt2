@@ -1,0 +1,12 @@
+best_approx = (0, 1)
+best_diff = 2
+
+for q in range(2, 100001):
+    for p in range(int(q * 1.4), int(q * 1.5) + 1):
+        approx = p / q
+        diff = abs(approx - (2 ** 0.5))
+        if diff < best_diff:
+            best_diff = diff
+            best_approx = (p, q)
+
+print(best_approx)
