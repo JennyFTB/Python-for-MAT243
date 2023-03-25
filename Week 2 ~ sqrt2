@@ -1,9 +1,11 @@
 best_diff = 2
 best_est = (0, 1)
 
-
+# run through rnge numbers between 2 and 100000
 for q in range(2, 100001):
+#run through p numbers between 1.4 and 1.5 + 1 to keep 1.4<p/q<1.5
     for p in range(int(q * 1.4), int(q * 1.5) + 1):
+    #diff between p/q and srt of 2
         approx = p / q
         diff = abs(approx - (2 ** 0.5))
         if diff < best_diff:
